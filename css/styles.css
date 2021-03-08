@@ -35,7 +35,11 @@ header {
   font-weight: 300;
   padding-top: 150px;
 }
-
+@media screen and (max-width: 565px) {
+  .header-text {
+    padding-top: 100px;
+  }
+}
 .header-text span:nth-child(1) {
   font-size: 20px;
   margin-bottom: 20px;
@@ -46,19 +50,33 @@ header {
   font-weight: 700;
 }
 
+@media screen and (max-width: 565px) {
+  .header-text span:nth-child(2) {
+    font-size: 45px;
+  }
+}
+
 .profile {
   border-radius: 50%;
   width: 350px;
   height: 350px;
   z-index: 100;
   position: absolute;
-  top: 310px;
+  top: 290px;
   border: 20px solid rgba(255, 255, 255, 0.05);
   transition: transform 0.5s ease-in-out;
 }
 
 .profile:hover {
   transform: scale(1.03);
+}
+
+@media screen and (max-width: 565px) {
+  .profile {
+    width: 200px;
+    height: 200px;
+    top: 230px;
+  }
 }
 
 .nav {
@@ -76,14 +94,16 @@ header {
   margin-bottom: 20px;
 }
 
-.container {
-  width: 100vw;
-  height: 900px;
-  padding: 10px;
-
-  border-bottom: 1px solid black;
+.blank {
+  width: 100%;
+  height: 230px;
   background-color: white;
+}
 
+.container {
+  width: 100%;
+  height: 900px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,14 +111,29 @@ header {
 
 .title-text {
   text-align: center;
-  padding-top: 230px;
   font-size: 40px;
   font-weight: 700;
+  margin-top: 20px;
 }
+
+@media screen and (max-width: 565px) {
+  .title-text {
+    font-size: 22px;
+    margin-top: 0px;
+  }
+}
+
 .sub-title-text {
   font-size: 25px;
   font-weight: 700;
   margin: 40px 0px;
+}
+
+@media screen and (max-width: 565px) {
+  .sub-title-text {
+    font-size: 18px;
+    margin-top: 0px;
+  }
 }
 
 .tools {
@@ -142,6 +177,7 @@ header {
   align-items: center;
   margin: 0px 50px;
   height: 200px;
+  text-align: center;
 }
 
 .project-item img {
