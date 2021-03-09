@@ -25,10 +25,16 @@ body {
   line-height: 30px;
   background: linear-gradient(270deg, var(--pink), var(--blue));
   background-size: 200% 200%;
-  -webkit-animation: bganimation 10s ease infinite;
-  -moz-animation: bganimation 10s ease infinite;
-  animation: bganimation 10s ease infinite;
+  -webkit-animation: bganimation 10s ease-in-out infinite;
+  -moz-animation: bganimation 10s ease-in-out infinite;
+  animation: bganimation 10s ease-in-out infinite;
 }
+
+i {
+  font-size: 40px;
+}
+
+/* header */
 
 .header {
   display: flex;
@@ -40,7 +46,7 @@ body {
 
 @media screen and (max-width: 565px) {
   .header {
-    height: 400px;
+    height: 350px;
   }
 }
 
@@ -56,18 +62,18 @@ body {
 
 @media screen and (max-width: 565px) {
   .header-text {
-    margin-top: 140px;
+    margin-top: 110px;
   }
 }
 
-.header-text span:nth-child(2) {
+.header-text h1:nth-child(2) {
   margin-top: 20px;
   font-size: 60px;
   font-weight: 700;
 }
 
 @media screen and (max-width: 565px) {
-  .header-text span:nth-child(2) {
+  .header-text h1:nth-child(2) {
     font-size: 45px;
   }
 }
@@ -84,14 +90,14 @@ body {
 }
 
 .profile:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 565px) {
   .profile {
     width: 200px;
     height: 200px;
-    top: 280px;
+    top: 240px;
   }
 }
 
@@ -100,16 +106,16 @@ body {
 .nav {
   width: 100%;
   padding: 5px 0px;
-  z-index: 999;
   position: fixed;
   top: 0;
+  z-index: 999;
   font-size: 15px;
   font-weight: 700;
   background: linear-gradient(270deg, var(--pink), var(--blue));
   background-size: 200% 200%;
-  -webkit-animation: bganimation 10s ease infinite;
-  -moz-animation: bganimation 10s ease infinite;
-  animation: bganimation 10s ease infinite;
+  -webkit-animation: bganimation 10s ease-in-out infinite;
+  -moz-animation: bganimation 10s ease-in-out infinite;
+  animation: bganimation 10s ease-in-out infinite;
 }
 
 .nav ul {
@@ -137,11 +143,6 @@ body {
   scroll-snap-align: start;
 }
 
-#one {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-}
-
 .title-text {
   text-align: center;
   font-size: 40px;
@@ -154,6 +155,12 @@ body {
   padding-top: 120px;
 }
 
+.sub-title-text {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 40px 0px;
+}
+
 @media screen and (max-width: 565px) {
   .section:nth-child(4) .title-text {
     font-size: 22px;
@@ -162,15 +169,6 @@ body {
   .title-text {
     font-size: 22px;
   }
-}
-
-.sub-title-text {
-  font-size: 25px;
-  font-weight: 700;
-  margin: 40px 0px;
-}
-
-@media screen and (max-width: 565px) {
   .sub-title-text {
     font-size: 18px;
     margin-top: 0px;
@@ -183,9 +181,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
+/* section one */
+
+#one {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
 .tools-img {
   display: flex;
   justify-content: center;
@@ -199,6 +202,7 @@ body {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transition: transform 0.5s ease-in-out;
 }
+
 @media screen and (max-width: 565px) {
   .tools-img img {
     width: 50px;
@@ -207,16 +211,16 @@ body {
 }
 
 .tools-img img:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .project {
-  width: 100%;
   display: flex;
   justify-content: center;
   font-size: 20px;
   text-align: center;
 }
+
 .project div {
   display: flex;
   flex-direction: column;
@@ -224,23 +228,20 @@ body {
   margin: 0px 20px;
 }
 
-@media screen and (max-width: 1024px) {
-  .project div {
-    width: 40%;
-  }
-}
 .project a:hover {
   color: var(--blue);
 }
+
 @media screen and (max-width: 565px) {
   .project a {
     font-size: 15px;
   }
 }
+
 .project img {
   margin-bottom: 30px;
   width: 80%;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: transform 0.5s ease-in-out;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -249,6 +250,8 @@ body {
 .project img:hover {
   transform: scale(1.03);
 }
+
+/* section two */
 
 #two .section-item {
   margin-top: 40px;
@@ -261,25 +264,26 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 @media screen and (max-width: 565px) {
   .favorite {
     font-size: 15px;
   }
 }
+
 .favorite i {
   margin-right: 20px;
-  font-size: 40px;
   background: linear-gradient(320deg, var(--pink), var(--blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.contact {
-  font-size: 40px;
-}
+/* section three */
+
 .contact i {
   margin: 50px 30px;
 }
+
 .contact i:hover {
   background: linear-gradient(320deg, var(--pink), var(--blue));
   -webkit-background-clip: text;
@@ -295,6 +299,8 @@ body {
   font-size: 15px;
   padding: 30px 0px;
 }
+
+/* animations */
 
 @-webkit-keyframes bganimation {
   0% {
