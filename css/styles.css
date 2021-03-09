@@ -7,6 +7,7 @@ html {
   scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-behavior: smooth;
+  scroll-snap-type: y;
 }
 
 html::-webkit-scrollbar {
@@ -24,9 +25,9 @@ body {
   line-height: 30px;
   background: linear-gradient(270deg, var(--pink), var(--blue));
   background-size: 200% 200%;
-  -webkit-animation: headerbg 10s ease infinite;
-  -moz-animation: headerbg 10s ease infinite;
-  animation: headerbg 10s ease infinite;
+  -webkit-animation: bganimation 10s ease infinite;
+  -moz-animation: bganimation 10s ease infinite;
+  animation: bganimation 10s ease infinite;
 }
 
 .header {
@@ -106,9 +107,9 @@ body {
   font-weight: 700;
   background: linear-gradient(270deg, var(--pink), var(--blue));
   background-size: 200% 200%;
-  -webkit-animation: headerbg 10s ease infinite;
-  -moz-animation: headerbg 10s ease infinite;
-  animation: headerbg 10s ease infinite;
+  -webkit-animation: bganimation 10s ease infinite;
+  -moz-animation: bganimation 10s ease infinite;
+  animation: bganimation 10s ease infinite;
 }
 
 .nav ul {
@@ -133,6 +134,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 100px 0px;
+  scroll-snap-align: start;
 }
 
 #one {
@@ -294,7 +296,7 @@ body {
   padding: 30px 0px;
 }
 
-@-webkit-keyframes headerbg {
+@-webkit-keyframes bganimation {
   0% {
     background-position: 0% 50%;
   }
@@ -305,7 +307,7 @@ body {
     background-position: 0% 50%;
   }
 }
-@-moz-keyframes headerbg {
+@-moz-keyframes bganimation {
   0% {
     background-position: 0% 50%;
   }
@@ -316,7 +318,7 @@ body {
     background-position: 0% 50%;
   }
 }
-@keyframes headerbg {
+@keyframes bganimation {
   0% {
     background-position: 0% 50%;
   }
