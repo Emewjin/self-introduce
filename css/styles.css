@@ -50,7 +50,6 @@ footer {
 header {
   display: flex;
   justify-content: center;
-  position: relative;
   width: 100%;
   height: 500px;
   scroll-snap-align: start;
@@ -168,8 +167,9 @@ header {
   width: 100%;
 }
 
-.section:nth-child(4) > .title-text {
-  padding-top: 120px;
+.section:nth-child(3) > .title-text {
+  padding-top: 130px;
+  padding-bottom: 40px;
   width: 90%;
 }
 
@@ -180,7 +180,7 @@ header {
 }
 
 @media screen and (max-width: 565px) {
-  .section:nth-child(4) .title-text {
+  .section:nth-child(3) .title-text {
     font-size: 22px;
     padding-top: 30px;
   }
@@ -207,6 +207,7 @@ header {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
+
 .tools-img {
   display: flex;
   justify-content: center;
