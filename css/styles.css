@@ -134,7 +134,14 @@ header {
 .nav li {
   margin: 0px 70px;
 }
-
+@media screen and (max-width: 320px) {
+  .nav {
+    font-size: 10px;
+  }
+  .nav li {
+    margin: 0px 50px;
+  }
+}
 .nav li a {
   color: white;
 }
@@ -160,6 +167,7 @@ header {
 
 .section:nth-child(4) > .title-text {
   padding-top: 120px;
+  width: 90%;
 }
 
 .sub-title-text {
