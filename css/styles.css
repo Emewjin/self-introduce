@@ -55,15 +55,13 @@ header {
   height: 500px;
 }
 
-@media screen and (max-width: 565px) {
+@media all and (max-width: 565px) {
   header {
     height: 350px;
   }
 }
 
 .header-text {
-  display: flex;
-  flex-direction: column;
   margin-top: 150px;
   color: white;
   font-weight: 300;
