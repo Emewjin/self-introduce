@@ -157,7 +157,7 @@ header {
 
 /* sections */
 
-.section {
+section {
   background-color: white;
   width: 100%;
   display: flex;
@@ -176,7 +176,7 @@ header {
   width: 100%;
 }
 
-.section:nth-child(3) > .title-text {
+section:nth-child(3) > .title-text {
   padding-top: 200px;
   padding-bottom: 40px;
   width: 90%;
@@ -189,7 +189,7 @@ header {
 }
 
 @media screen and (max-width: 565px) {
-  .section:nth-child(3) .title-text {
+  section:nth-child(3) .title-text {
     padding-top: 130px;
   }
   .title-text {
@@ -310,6 +310,7 @@ header {
   row-gap: 10px;
   justify-items: center;
   margin-top: 40px;
+  animation: fadein 1s;
 }
 
 .favorite-img img {
@@ -362,5 +363,46 @@ header {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
