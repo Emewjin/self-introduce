@@ -228,6 +228,7 @@ section:nth-child(3) > .title-text {
   border: solid 5px white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transition: transform 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 565px) {
@@ -312,6 +313,11 @@ section:nth-child(3) > .title-text {
   -webkit-text-fill-color: transparent;
 }
 
+.favorite:nth-child(2),
+.favorite:nth-child(3) {
+  cursor: pointer;
+}
+
 .favorite-img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -324,6 +330,10 @@ section:nth-child(3) > .title-text {
 .favorite-img img {
   width: 90%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hidden {
+  display: none;
 }
 
 /* section three */
