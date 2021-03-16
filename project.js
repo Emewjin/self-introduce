@@ -3,22 +3,23 @@ const projectItem = document.querySelectorAll(".project div");
 const OPACITY = "opacity-half"
 const SCALE = "click-scale"
 
+
 function showJsProject(){
+    this.classList.add(SCALE);
     filterIcon[1].classList.remove(SCALE);
     filterIcon[2].classList.remove(SCALE);
-    filterIcon[0].classList.add(SCALE);
     projectItem[0].classList.add(OPACITY);
 }
 function showHtmlProject(){
-    filterIcon[0].classList.remove(SCALE);
+    this.classList.add(SCALE);
     filterIcon[2].classList.remove(SCALE);
-    filterIcon[1].classList.add(SCALE);
+    filterIcon[0].classList.remove(SCALE);
     projectItem[0].classList.remove(OPACITY);
 }
 function showCssProject(){
-    filterIcon[0].classList.remove(SCALE);
+    this.classList.add(SCALE);
     filterIcon[1].classList.remove(SCALE);
-    filterIcon[2].classList.add(SCALE);
+    filterIcon[0].classList.remove(SCALE);
     projectItem[0].classList.remove(OPACITY);
 }
 
