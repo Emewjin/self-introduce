@@ -3,15 +3,18 @@ const favImgDrama = document.querySelector('.js-fav-one');
 const favoriteItem = document.querySelectorAll('.favorite');
 const HIDDEN="hidden";
 
-function showDramaImg(){
-favImgDog.classList.add(HIDDEN);
-favImgDrama.classList.remove(HIDDEN);
+function printFavImg(a,b){
+    b.classList.add(HIDDEN);
+    a.classList.remove(HIDDEN);
 }
 
-function showDogImg(){
-favImgDrama.classList.add(HIDDEN);
-favImgDog.classList.remove(HIDDEN);
+function clickDramaImg(){
+    printFavImg(favImgDrama,favImgDog);
 }
 
-favoriteItem[1].addEventListener("click", showDramaImg);
-favoriteItem[2].addEventListener("click", showDogImg);
+function clickDogImg(){
+    printFavImg(favImgDog,favImgDrama);
+}
+
+favoriteItem[1].addEventListener("click", clickDramaImg);
+favoriteItem[2].addEventListener("click", clickDogImg);
