@@ -3,23 +3,24 @@ const projectItem = document.querySelectorAll(".project div");
 const OPACITY = "opacity-half"
 const SCALE = "click-scale"
 
+function changeClassList(a,b,c){
+    filterIcon[a].classList.add(SCALE);
+    filterIcon[b].classList.remove(SCALE);
+    filterIcon[c].classList.remove(SCALE);
+}
 
 function showJsProject(){
-    this.classList.add(SCALE);
-    filterIcon[1].classList.remove(SCALE);
-    filterIcon[2].classList.remove(SCALE);
+    changeClassList(0,1,2);
     projectItem[0].classList.add(OPACITY);
 }
+
 function showHtmlProject(){
-    this.classList.add(SCALE);
-    filterIcon[2].classList.remove(SCALE);
-    filterIcon[0].classList.remove(SCALE);
+    changeClassList(1,0,2);
     projectItem[0].classList.remove(OPACITY);
 }
+
 function showCssProject(){
-    this.classList.add(SCALE);
-    filterIcon[1].classList.remove(SCALE);
-    filterIcon[0].classList.remove(SCALE);
+    changeClassList(2,0,1);
     projectItem[0].classList.remove(OPACITY);
 }
 
