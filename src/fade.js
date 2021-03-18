@@ -18,11 +18,10 @@ function debounce(func, wait = 20, immediate = true) {
     };
   }
 
-  function checkScroll(e) {
-    // console.count(e);
+  function checkScroll() {
     fadeImgs.forEach((fadeImg) => {
       const scrollInAt =
-        window.scrollY + window.innerHeight - fadeImg.height / 2;
+        window.scrollY + window.innerHeight - fadeImg.height / 4;
       const imageBottom = fadeImg.offsetTop + fadeImg.height;
       const isHalfShown = scrollInAt > fadeImg.offsetTop;
       const isNotScrolledPast = window.scrollY < imageBottom;
