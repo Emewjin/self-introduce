@@ -1,11 +1,11 @@
 const favImgDog = document.querySelector('.js-fav-two');
 const favImgDrama = document.querySelector('.js-fav-one');
 const favoriteItem = document.querySelectorAll('.favorite');
-const HIDDEN="hidden";
+const HIDDEN = "hidden";
 
 function printFavImg(a,b){
-    b.classList.add(HIDDEN);
     a.classList.remove(HIDDEN);
+    b.classList.add(HIDDEN);
 }
 
 function clickDramaImg(){

@@ -3,15 +3,17 @@ const favorImgs = document.querySelectorAll('.favorite-img img');
 const fadeImgs = [...projectImgs, ...favorImgs];
 
 function debounce(func, wait = 20, immediate = true) {
-    var timeout;
+    let timeout;
     return function () {
-      var context = this,
+      const context = this,
         args = arguments;
-      var later = function () {
+      const later = () => {
         timeout = null;
         if (!immediate) func.apply(context, args);
       };
-      var callNow = immediate && !timeout;
+
+      let callNow = immediate && !timeout;
+      
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
       if (callNow) func.apply(context, args);

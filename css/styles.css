@@ -278,14 +278,6 @@ section:nth-child(3) > .title-text {
   transform: scale(1.03);
 }
 
-.opacity-half {
-  opacity: 50%;
-}
-
-.click-scale {
-  transform: scale(1.2);
-}
-
 /* section two */
 
 #two .section-item {
@@ -360,7 +352,15 @@ section:nth-child(3) > .title-text {
   animation: fadein 1s;
 }
 
-/* scroll.js */
+/* project.js */
+
+.opacity-half {
+  opacity: 50%;
+}
+
+.click-scale {
+  transform: scale(1.2);
+}
 
 /* animations */
 
