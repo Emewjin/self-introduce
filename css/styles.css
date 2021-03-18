@@ -30,11 +30,6 @@ body {
   -moz-animation: bganimation 10s ease-in-out infinite;
   animation: bganimation 10s ease-in-out infinite;
 }
-@media screen and (max-width: 565px) {
-  body {
-    line-height: 35px;
-  }
-}
 
 i {
   font-size: 40px;
@@ -60,12 +55,6 @@ header {
   /* scroll-snap-align: start; */
 }
 
-@media screen and (max-width: 565px) {
-  header {
-    height: 350px;
-  }
-}
-
 .header-text {
   display: flex;
   flex-direction: column;
@@ -75,22 +64,10 @@ header {
   font-size: 20px;
 }
 
-@media screen and (max-width: 565px) {
-  .header-text {
-    padding: 110px 0px;
-  }
-}
-
 .header-text h1:nth-child(2) {
   margin-top: 10px;
   font-size: 60px;
   font-weight: 700;
-}
-
-@media screen and (max-width: 565px) {
-  .header-text h1:nth-child(2) {
-    font-size: 45px;
-  }
 }
 
 .profile {
@@ -106,14 +83,6 @@ header {
 
 .profile:hover {
   transform: scale(1.1);
-}
-
-@media screen and (max-width: 565px) {
-  .profile {
-    width: 200px;
-    height: 200px;
-    top: 240px;
-  }
 }
 
 /* navigation */
@@ -142,15 +111,6 @@ header {
   margin: 0px 70px;
 }
 
-@media screen and (max-width: 320px) {
-  .nav {
-    font-size: 10px;
-  }
-  .nav li {
-    margin: 0px 50px;
-  }
-}
-
 .nav li a {
   color: white;
 }
@@ -167,38 +127,22 @@ section {
   /* scroll-snap-align: start; */
 }
 
-.title-text {
+h2 {
   font-size: 40px;
   font-weight: 700;
   margin-top: 20px;
   padding-top: 50px;
-  /* 스크롤스냅/네비게이션 이동시 타이틀 텍스트가 잘려서 추가 */
-  width: 100%;
+  padding-bottom: 10px;
 }
 
-section:nth-child(3) > .title-text {
+section:nth-child(3) > h2 {
   padding-top: 200px;
-  padding-bottom: 40px;
-  width: 90%;
 }
 
 .sub-title-text {
   font-size: 25px;
   font-weight: 700;
   margin: 40px 0px;
-}
-
-@media screen and (max-width: 565px) {
-  section:nth-child(3) .title-text {
-    padding-top: 130px;
-  }
-  .title-text {
-    font-size: 25px;
-  }
-  .sub-title-text {
-    font-size: 20px;
-    margin-top: 0px;
-  }
 }
 
 .section-item {
@@ -231,13 +175,6 @@ section:nth-child(3) > .title-text {
   cursor: pointer;
 }
 
-@media screen and (max-width: 565px) {
-  .tools-img img {
-    width: 50px;
-    margin: 0px 10px;
-  }
-}
-
 .tools-img img:hover {
   transform: scale(1.2);
 }
@@ -257,12 +194,6 @@ section:nth-child(3) > .title-text {
 
 .project a:hover {
   color: var(--blue);
-}
-
-@media screen and (max-width: 565px) {
-  .project a {
-    font-size: 15px;
-  }
 }
 
 .project img {
@@ -291,15 +222,10 @@ section:nth-child(3) > .title-text {
   justify-content: center;
   align-items: center;
 }
+
 .favorite:nth-child(2):hover,
 .favorite:nth-child(3):hover {
   color: var(--blue);
-}
-
-@media screen and (max-width: 565px) {
-  .favorite {
-    font-size: 15px;
-  }
 }
 
 .favorite i {
@@ -339,6 +265,68 @@ section:nth-child(3) > .title-text {
   background: linear-gradient(320deg, var(--pink), var(--blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* media query */
+
+@media screen and (max-width: 565px) {
+  body {
+    line-height: 35px;
+  }
+
+  header {
+    height: 350px;
+  }
+
+  .header-text {
+    padding: 110px 0px;
+  }
+
+  .header-text h1:nth-child(2) {
+    font-size: 45px;
+  }
+
+  .profile {
+    width: 200px;
+    height: 200px;
+    top: 240px;
+  }
+
+  section:nth-child(3) .title-text {
+    padding-top: 130px;
+  }
+
+  .title-text {
+    font-size: 25px;
+  }
+
+  .sub-title-text {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+
+  .tools-img img {
+    width: 50px;
+    margin: 0px 10px;
+  }
+
+  .project a {
+    font-size: 15px;
+  }
+
+  .favorite {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav {
+    font-size: 10px;
+  }
+
+  .nav li {
+    margin: 0px 50px;
+  }
 }
 
 /* fade.js */

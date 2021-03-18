@@ -9,7 +9,6 @@ function moveToAnchor() {
 
 function smoothScroll(el, duration) {
     const target = document.getElementById(el);
-    // console.log('hi', target.offsetTop);
     const targetPosition = target.offsetTop;
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
@@ -36,6 +35,6 @@ function smoothScroll(el, duration) {
 
 }
 
-navBtns.forEach((navBtn) => 
-    navBtn.addEventListener('click', moveToAnchor)
-);
+navBtns.forEach((navBtn) => {
+    navBtn.addEventListener('click', moveToAnchor);
+});
