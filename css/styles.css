@@ -137,6 +137,7 @@ h2 {
 
 section:nth-child(3) > h2 {
   padding-top: 200px;
+  width: 90%;
 }
 
 .sub-title-text {
@@ -292,11 +293,11 @@ section:nth-child(3) > h2 {
     top: 240px;
   }
 
-  section:nth-child(3) .title-text {
+  section:nth-child(3) h2 {
     padding-top: 130px;
   }
 
-  .title-text {
+  h2 {
     font-size: 25px;
   }
 
