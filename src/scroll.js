@@ -2,19 +2,17 @@ const navBtns = document.querySelectorAll('nav ul li');
 
 function moveToAnchor() {
     const aTag = this.querySelector('a');
-    const hrefValue = aTag.getAttribute("href");
-    const sectionId = hrefValue.slice(1);
+    const sectionId = aTag.getAttribute("href");
     smoothScroll(sectionId, 1500)
 }
 
 function smoothScroll(el, duration) {
-    const target = document.getElementById(el);
+    const target = document.querySelector(el);
+    console.log(target);
     const targetPosition = target.offsetTop;
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
     let startTime = null;
-
-    console.log(distance, startPosition, targetPosition);
 
     function animate(currentTime) {
         if(startTime === null) startTime = currentTime;
