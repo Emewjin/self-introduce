@@ -1,6 +1,7 @@
 const projectImgs = document.querySelectorAll('.project img');
 const favorImgs = document.querySelectorAll('.favorite-img img');
 const fadeImgs = [...projectImgs, ...favorImgs];
+const ACTIVE = "active";
 
 function debounce(func, wait = 20, immediate = true) {
     let timeout;
@@ -28,9 +29,9 @@ function debounce(func, wait = 20, immediate = true) {
       const isQuarterShown = scrollInAt > fadeImg.offsetTop;
       const isNotScrolledPast = window.scrollY < imageBottom;
       if (isQuarterShown && isNotScrolledPast) {
-        fadeImg.classList.add("active");
+        fadeImg.classList.add(ACTIVE);
       } else {
-        fadeImg.classList.remove("active");
+        fadeImg.classList.remove(ACTIVE);
       }
     });
   }
