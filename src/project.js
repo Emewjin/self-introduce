@@ -1,35 +1,43 @@
 const filterIcons = document.querySelectorAll(".tools-img img");
 const projectItem = document.querySelectorAll(".project-item");
-const items = projectItem[0].childNodes;
+const filterCloseBtn = document.querySelector('.tools-img__close');
 const SCALE = "click-scale"
+const OPACITY = "opacity"
 
 function changeClassList(a,b,c){
     filterIcons[a].classList.add(SCALE);
     filterIcons[b].classList.remove(SCALE);
     filterIcons[c].classList.remove(SCALE);
+    filterCloseBtn.classList.remove(HIDDEN);
 }
 
 function showJsProject(){
     changeClassList(0,1,2);
-    items[1].classList.add(HIDDEN);
-    items[3].classList.add(HIDDEN);
+    projectItem[0].classList.add(OPACITY);
 }
 
 function showHtmlProject(){
     changeClassList(1,0,2);
-    items[1].classList.remove(HIDDEN);
-    items[3].classList.remove(HIDDEN);
+    projectItem[0].classList.remove(OPACITY);
 }
 
 function showCssProject(){
     changeClassList(2,0,1);
-    items[1].classList.remove(HIDDEN);
-    items[3].classList.remove(HIDDEN);
+    projectItem[0].classList.remove(OPACITY);
+}
+
+function showAll() {
+    filterIcons[0].classList.remove(SCALE);
+    filterIcons[1].classList.remove(SCALE);
+    filterIcons[2].classList.remove(SCALE);
+    projectItem[0].classList.remove(OPACITY);
+    filterCloseBtn.classList.add(HIDDEN);
 }
 
 filterIcons[0].addEventListener("click", showJsProject);
 filterIcons[1].addEventListener("click", showHtmlProject);
 filterIcons[2].addEventListener("click", showCssProject);
+filterCloseBtn.addEventListener("click", showAll);
 
 const modalOpenBtn = document.querySelector('.project + button');
 const modal = document.querySelector('.modal');
